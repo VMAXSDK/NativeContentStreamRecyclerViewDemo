@@ -1,6 +1,7 @@
 package com.vmax.demo.nativeCSRecycler;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
          public TheViewHolder(View v,int position)
         {
             super(v);
-            if(position!=4&&theAd!=null) {
+            if(position!=4) {
 
                 blogImage = (ImageView) v.findViewById(R.id.blog_img);
                 mainTitle = (TextView) v.findViewById(R.id.blog_title);
@@ -49,7 +50,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
 
         TheViewHolder theViewHolder;
         View view;
-        if(viewType==4){
+        if(viewType==4&&theAd!=null){
 
         view=theAd;
         }
@@ -68,7 +69,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
 
        if(position!=4)
        {
-
+           Log.e("position",String.valueOf(position));
            holder.blogImage.setImageDrawable(blogList.get(position).getBlogImage());
            holder.author.setText(blogList.get(position).getAuthor());
            holder.date.setText(blogList.get(position).getDate());
