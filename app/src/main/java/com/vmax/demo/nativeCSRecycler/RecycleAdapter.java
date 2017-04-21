@@ -32,6 +32,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
         {
             super(v);
             if(position!=4&&theAd!=null) {
+
                 blogImage = (ImageView) v.findViewById(R.id.blog_img);
                 mainTitle = (TextView) v.findViewById(R.id.blog_title);
                 date = (TextView) v.findViewById(R.id.blog_date);
