@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loadNativeInfeed();
+        loadNativeContentStream();
 
     }
 
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(recycleAdapter);
     }
 
-    /** Method for adding Native Infeed */
-    public void loadNativeInfeed()
+    /** Method for adding Native Content Stream */
+    public void loadNativeContentStream()
     {
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("vmax", "icon URL=" + iconURL);
                             nativeImageElementSet.add(new NativeImageDownload(iconURL, iconView, 48, 48));
                         }
+
                         listview.add(iconView);
                     }
                     /**To fetch Ad Title*/
@@ -211,8 +212,12 @@ public class MainActivity extends AppCompatActivity {
                     ImageLoader imageLoader = new ImageLoader(nativeImageElementSet);
                     //setNativeImageDownloadListener() is optional, used to get notified when all image elements are successfully downloaded
                     imageLoader.setNativeImageDownloadListener(new NativeImageDownloadListener() {
-                        @Override public void onTaskDone() {}
-                        @Override public void onTaskError() {}
+                        @Override public void onTaskDone() {
+
+                        }
+                        @Override public void onTaskError() {
+
+                        }
                     });
                     imageLoader.execute();
                     FrameLayout adchoiceViewLayout = (FrameLayout) fl_native.findViewById(R.id.vmax_custom_adChoiceView);

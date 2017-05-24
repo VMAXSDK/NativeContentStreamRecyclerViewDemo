@@ -50,6 +50,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
 
         TheViewHolder theViewHolder;
         View view;
+
         if(viewType==4&&theAd!=null){
 
         view=theAd;
@@ -59,6 +60,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycle_view,
                     parent, false);
         }
+
+
+
 
 
         return new TheViewHolder(view,viewType);
