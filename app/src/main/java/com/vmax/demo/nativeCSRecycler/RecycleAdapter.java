@@ -1,5 +1,6 @@
 package com.vmax.demo.nativeCSRecycler;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.vmax.android.ads.api.VmaxAdView;
 
 import java.util.ArrayList;
 
@@ -18,11 +21,12 @@ import java.util.ArrayList;
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewHolder> {
 
     ArrayList<BlogModel> blogList;
-    RelativeLayout theAd;
-    public RecycleAdapter(ArrayList<BlogModel> list, RelativeLayout adContainer)
+    VmaxAdView theAd;
+    public RecycleAdapter( ArrayList<BlogModel> list,VmaxAdView vmaxAdView)
     {
         blogList=list;
-       theAd=adContainer;
+       theAd=vmaxAdView;
+
     }
 
     public class TheViewHolder extends RecyclerView.ViewHolder
@@ -48,7 +52,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
     @Override
     public TheViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        TheViewHolder theViewHolder;
+
         View view;
 
         if(viewType==4&&theAd!=null){
