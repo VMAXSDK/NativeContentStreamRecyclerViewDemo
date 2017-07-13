@@ -21,7 +21,6 @@ public class MainActivity extends Activity {
 
     LayoutInflater layoutInflater;
     RecyclerView recyclerView;
-    RelativeLayout adContainer;
     VmaxAdView vmaxAdView;
 
     @Override
