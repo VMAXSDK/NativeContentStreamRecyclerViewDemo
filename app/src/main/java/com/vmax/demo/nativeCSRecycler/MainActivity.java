@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import com.vmax.android.ads.api.VmaxAdView;
 
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
         layoutInflater=(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         vmaxAdView=(VmaxAdView) layoutInflater.inflate(R.layout.vmax_custom_native_layout,null);
         InitializeRecycler();
+
 
 
     }

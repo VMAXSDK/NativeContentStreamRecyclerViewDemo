@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <com.vmax.android.ads.api.VmaxAdView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:vmax="http://schemas.android.com/apk/res-auto"
@@ -14,20 +15,10 @@
     android:paddingBottom="10dp"
    >
 
-    <ImageView
-        android:src="@mipmap/ic_launcher"
-        android:id="@+id/vmax_custom_icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tag="@string/vmax_native_icon"
-        />
-
-
-
 
     <TextView
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/vmax_custom_icon"
+        android:layout_toRightOf="@+id/vmax_custom_icon"
         android:id="@+id/vmax_custom_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +71,7 @@
     </LinearLayout>
 
     <TextView
-        android:layout_toRightOf="@id/vmax_custom_icon"
+        android:layout_toRightOf="@+id/vmax_custom_icon"
         android:layout_below="@id/vmax_custom_title"
         android:id="@+id/vmax_custom_desc"
         android:layout_width="wrap_content"
@@ -88,20 +79,33 @@
         android:tag="@string/vmax_native_description"
         android:layout_marginTop="1sp"
         android:ellipsize="end"
-        android:lines="2"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:text="Description"
         android:textColor="#000000"
         android:textSize="8sp" />
 
+    <TextView
+        android:layout_toRightOf="@+id/vmax_custom_icon"
+        android:layout_below="@id/vmax_custom_desc"
+        android:id="@+id/flurry_advertiser_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/vmax_advertiser_name"
+        android:layout_marginTop="1sp"
+        android:ellipsize="end"
 
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Flurry advertiser name"
+        android:textColor="#000000"
+        android:textSize="8sp" />
 
 
     <RelativeLayout
         android:gravity="center"
         android:id="@+id/rl_media"
-        android:layout_below="@id/vmax_custom_icon"
+        android:layout_below="@+id/vmax_custom_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -138,5 +142,15 @@
         android:paddingRight="1dp"
         android:text="Install Now"
         android:textAlignment="center" />
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/vmax_custom_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tag="@string/vmax_native_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <!--android:clickable="false"-->
 </com.vmax.android.ads.api.VmaxAdView>
