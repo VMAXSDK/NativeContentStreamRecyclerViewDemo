@@ -31,8 +31,6 @@ public class MainActivity extends Activity {
         vmaxAdView=(VmaxAdView) layoutInflater.inflate(R.layout.vmax_custom_native_layout,null);
         InitializeRecycler();
 
-
-
     }
 
     public void InitializeRecycler()
