@@ -5,8 +5,6 @@
     xmlns:vmax="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    vmax:compositeViewWidthInDp="320"
-    vmax:compositeViewHeightInDp="250"
     android:background="@drawable/vmax_nativeborder"
     android:layout_gravity="center"
     vmax:adspotKey="9060b6e3"
@@ -15,15 +13,6 @@
     android:paddingBottom="10dp"
     android:visibility="gone"
    >
-    <!-- Minimum requirements for AdMob templates(wxh dp)
-    Small:  280x80
-    Medium: 280x132
-    Large:  280x250
-    Maximum limits for AdMob templates(wxh dp)
-    Small:  1200x612
-    Medium: 1200x1200
-    Large:  1200x1200-->
-
 
     <TextView
         android:layout_marginTop="5dp"
